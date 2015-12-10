@@ -1,4 +1,5 @@
 var arryMem = [];
+count = 0;
 
 function reverseNum (num) {
   stringIt = num.toString();
@@ -13,7 +14,8 @@ function reverseNum (num) {
     else {
       num = arryMem[0] + arryMem[1];
       arryMem = [];
+      count = count + 1;
       return reverseNum (num);
     }
 }
-console.log(reverseNum(87));
+console.log(reverseNum(87), count);

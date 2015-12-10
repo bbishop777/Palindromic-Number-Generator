@@ -10,5 +10,10 @@ function reverseNum (num) {
     if (arryMem[0] === arryMem[1]) {
       return arryMem[0];
     }
+    else {
+      num = arryMem[0] + arryMem[1];
+      arryMem = [];
+      return reverseNum (num);
+    }
 }
-console.log(reverseNum(123));
+console.log(reverseNum(87));
